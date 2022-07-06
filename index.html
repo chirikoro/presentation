@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <div id="appname">
+      <h1>TSSクイズアプリ</h1>
+    </div>
+
+  </header>
+  <div id="main">
+
+    <div id="contents">
+      <div id="select-area">
+        <div id="systemselect">
+          <select name="example" id="selector">
+            <option value="ACC">ACC</option>
+            <option value="PCS">PCS</option>
+            <option value="LTA">LTA</option>
+          </select>
+        </div>
+        <div id="decision">
+          <button id="systemButton">決定</button>
+        </div>
+      </div>
+      <div id="quiz-area">
+        <div id="question">
+          <div id="quiz"></div>
+        </div>
+        <div id="button-area">
+          <div class="button">
+            <button class="red select">選択１</button>
+          </div>
+          <div class="button">
+            <button class="blue select">選択2</button>
+          </div>
+          <div class="button">
+            <button class="yellow select">選択3</button>
+          </div>
+          <div class="button">
+            <button class="green select">選択4</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="correct-area">
+    <h1 id="correct"></h1>
+  </div>
+  <div id="picture">
+    <img src="img/22868269_s.jpg">
+  </div>
+  <div id="next">
+    <button id="next-button">次へ</button>
+  </div>
+  <footer>
+
+  </footer>
+  <script type="text/javascript" src="modules/lodash.min.js"></script>
+  <script type="text/javascript" src="modules/test-boilerplate.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
