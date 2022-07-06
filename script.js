@@ -1,5 +1,3 @@
-'use strict'
-// 1行目に記載している 'use strict' は削除しないでください
 const systemButton = document.getElementById('systemButton');
 let selectsystem = "";
 
@@ -90,14 +88,14 @@ const clickHandler = (e) => {
     const img = document.getElementsByTagName('img')[0];
     clickCnt++
     if (quiz[selectsystem][quizIndex].correct === e.target.textContent) {
+        img.src = 'img/22868269_s.jpg'
         h1.textContent = '正解';
         h1.style.color = 'blue'
-        img.src = 'img/22868269_s.jpg'
         score++; //得点加算
     } else {
+        img.src = 'img/3693522_s.jpg'
         h1.textContent = '不正解';
         h1.style.color = 'red'
-        img.src = 'img/3693522_s.jpg'
     }
     // 次へのボタンを出力させる
     const nextButton = document.getElementById('next-button');
@@ -148,5 +146,3 @@ for(let i = 0; i < $selectButton.length; i++){
         }
     });
 }
-
-// https://github.com/chirikoro/presentation.git
