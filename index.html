@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="ja">
-​
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="style.css" />
-  <title>Document</title>
+  <title>TSSクイズアプリ</title>
 </head>
-​
+
 <body>
   <header>
     <div id="appname">
       <h1>TSSクイズアプリ</h1>
     </div>
-​
+
   </header>
   <div id="main">
-​
+
     <div id="contents">
       <div id="select-area">
         <div id="systemselect">
@@ -53,20 +53,39 @@
       </div>
     </div>
   </div>
-  <div id="correct-area">
-    <h1 id="correct"></h1>
+  <div>
+    <div id="correct-area">
+      <h1 id="correct"></h1>
+    </div>
+    <div id="picture">
+      <img src="img/22868269_s.jpg">
+    </div>
+    <div id="next">
+      <button id="next-button">次へ</button>
+    </div>
   </div>
-  <div id="picture">
-    <img src="img/22868269_s.jpg">
+  <div id="presen">
+    <h1>苦労した点</h1>
+    <ul>
+      <li>部品の中央寄せがなかなかうまくできず時間がかかった。</li>
+      <li>フォントの大きさや部品の大きさ調整に時間がかかった。</li>
+      <li>解答ボタンを押し、次へボタン表示中に再度解答ボタンを押すと次の問題の解答をした事になるバグが発生した。</li>
+    </ul>
+    <h1>学んだ点</h1>
+    <ul>
+      <li>addEventListenerの使い方</li>
+      <li>javascriptでのcssの変更方法</li>
+      <li>HTMLやcssの書き方</li>
+    </ul>
   </div>
-  <div id="next">
-    <button id="next-button">次へ</button>
+  <div id="end">
+    <button id="endbtn">最初の画面へ戻る</button>
   </div>
   <footer>
-​
+
   </footer>
   <script type="text/javascript" src="modules/qustion.js"></script>
   <script type="text/javascript" src="script.js"></script>
 </body>
-​
+
 </html>
