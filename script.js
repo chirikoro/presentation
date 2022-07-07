@@ -8,7 +8,9 @@ let quizLength = 0;
 let quizIndex = 0;
 let score = 0;
 let clickCnt = 0;
-const $selectButton = document.getElementsByClassName('select');
+const selectButton = document.getElementsByClassName('select');
+const correctAudio = new Audio('sound/crrect_answer3.mp3');
+const blipAudio = new Audio('sound/blip01.mp3');
 
 systemButton.addEventListener('click', ()=>{
     const selectBox = document.getElementById('selector');
@@ -21,10 +23,10 @@ systemButton.addEventListener('click', ()=>{
 
 //クイズの問題文、選択肢を定義
 const setupQuiz = () => {
-    const $quizPanel = document.getElementById("quiz")
-    $quizPanel.textContent = quiz[selectsystem][quizIndex].question;
-    for (let i = 0; i < $selectButton.length; i++) {
-        $selectButton[i].textContent = quiz[selectsystem][quizIndex].answers[i];
+    const quizPanel = document.getElementById("quiz")
+    quizPanel.textContent = quiz[selectsystem][quizIndex].question;
+    for (let i = 0; i < selectButton.length; i++) {
+        selectButton[i].textContent = quiz[selectsystem][quizIndex].answers[i];
     }
     clickCnt = 0;
 }
@@ -45,11 +47,13 @@ const clickHandler = (e) => {
         img.src = 'img/22868269_s.jpg'
         h1.textContent = '正解';
         h1.style.color = 'blue'
+        correctAudio.play();
         score++; //得点加算
     } else {
         img.src = 'img/3693522_s.jpg'
         h1.textContent = '不正解';
         h1.style.color = 'red'
+        blipAudio.play();
     }
     // 次へのボタンを出力させる
     const nextButton = document.getElementById('next-button');
@@ -93,13 +97,10 @@ const clickHandler = (e) => {
 }
 
 //ボタンをクリックしたら正誤判定
-for(let i = 0; i < $selectButton.length; i++){
-    $selectButton[i].addEventListener('click', (e) => {
+for(let i = 0; i < selectButton.length; i++){
+    selectButton[i].addEventListener('click', (e) => {
         if(clickCnt === 0) {
         clickHandler(e);
         }
     });
 }
-
-// https://github.com/chirikoro/presentation.git
-// https://chirikoro.github.io/presentation/
