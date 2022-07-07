@@ -20,6 +20,10 @@ header{
     text-align: center;
 }
 
+h2{
+    margin-bottom: 10px;
+}
+
 #main{
     width: 100%;
     margin:0 auto;
@@ -27,7 +31,7 @@ header{
 }
 
 #contents{
-    width: 70%;
+    width: 80%;
     margin: auto;
 }
 
@@ -84,10 +88,14 @@ header{
     width: 25%;
 }
 
+.select{
+    font-size: 12px;
+}
+
 button{
     display: inline-block;
     height: 50px;
-    width: 220px;
+    width: 180px;
 }
 
 .red{
@@ -125,7 +133,7 @@ button{
 
 img{
     display: inline-block;
-    height: 250px;
+    height: 300px;
 }
 
 #next {
@@ -136,4 +144,20 @@ img{
 #next-button{
     display: none;
     height: 40px;
+}
+
+#presen{
+    display: none;
+    margin-left: 30px;
+    font-size: larger;
+}
+
+ul{
+    margin-bottom: 30px;
+}
+
+#end{
+    display: none;
+    text-align: center;
+    width: 100%;
 }
